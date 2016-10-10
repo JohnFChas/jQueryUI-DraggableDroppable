@@ -1,0 +1,32 @@
+﻿	┌──────────────────────────┐
+	│ Labbupgift: Kanban board │
+	└──────────────────────────┘
+Du ska skapa en web-app med hjälp av AngularJS, Bootstrap och jQueryUI.
+Appen ska fungera som en enkel kanban board.
+Du kan jobba med hårdkodad data den här gången.
+
+	┌───────────┐
+	│ Uppgifter │
+	└───────────┘
+- Använd draggable för att skapa todo-notes
+- Använd droppable för att skapa 3 boards att sätta dina notes på
+	- Boards: "Todo", "WIP", "Done"
+- Lägg till nya notes med en "Add note"-knapp
+
+	┌────────────────┐
+	│ Extrauppgifter │
+	└────────────────┘
+- Skapa Angular-components för draggable och droppable
+- Lägg till en soptunna där man kan slänga gamla notes
+- Lägg till en progressbar som visar hur många procent av todo-uppgifterna som är klara
+
+	┌────────┐
+	│ Länkar │
+	└────────┘
+jQueryUI demos: http://jqueryui.com/demos/
+
+Draggable: https://jqueryui.com/draggable/
+Draggable API documentation: http://api.jqueryui.com/draggable/
+
+Droppable: https://jqueryui.com/droppable/
+Droppable API documentation: http://api.jqueryui.com/droppable/
