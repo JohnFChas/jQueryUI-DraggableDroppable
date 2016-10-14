@@ -3,6 +3,10 @@
 </div>
 
 <div class="col-md-12">
+    <h3 ng-bind="count"></h3>
+</div>
+
+<div class="col-md-12">
     <progressbar id="1" value="50"></progressbar>
 </div>
 
@@ -12,6 +16,6 @@
     <draggable id="3" body="'My note 3'"></draggable>
 </div>
 <div class="col-md-6">
-    <droppable id="1"></droppable>
-    <droppable id="2"></droppable>
+    <droppable id="1" callbacks="callbacks"></droppable>
+    <!--<droppable id="2" countNotes="myFunction()"></droppable>-->
 </div>

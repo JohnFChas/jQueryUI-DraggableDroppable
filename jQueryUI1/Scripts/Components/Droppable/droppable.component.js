@@ -10,13 +10,16 @@
                 component.droppable({
                     drop: function (event, ui) {
                         //console.log("Dropped in " + scope.id);
-                        console.log(ui.draggable);
+                        //console.log(ui.draggable);
+                        ui.draggable.addClass("drag");
+                        scope.callbacks.setCount($(".drag").length);
                     }
                 });
             });
         },
         controllerAs: "scope",
         bindings: {
-            id: "="
+            id: "=",
+            callbacks: "="
         }
     })
