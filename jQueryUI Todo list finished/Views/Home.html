@@ -1,0 +1,27 @@
+﻿<div class="col-md-12">
+    <h1 ng-bind="title"></h1>
+</div>
+
+<div class="col-md-12">
+    <progressbar id="1" value="count" max="notes.length"></progressbar>
+</div>
+
+<div class="col-md-12">
+    <button type="button" class="btn btn-default" ng-click="addNote()">
+        <span class="glyphicon glyphicon-plus"></span> Add note
+    </button>
+</div>
+
+<div class="col-md-12">
+    <trashcan callbacks="callbacks"></trashcan>
+</div>
+
+<div class="col-md-6">
+    <div ng-repeat="note in notes track by note.id">
+        <note id="note.id" body="note.body"></note>
+    </div>
+</div>
+
+<div class="col-md-6">
+    <board id="1" callbacks="callbacks"></board>
+</div>

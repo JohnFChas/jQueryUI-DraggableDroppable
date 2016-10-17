@@ -9,10 +9,10 @@
                 component = $("#droppable-" + scope.id);
                 component.droppable({
                     drop: function (event, ui) {
-                        //console.log("Dropped in " + scope.id);
-                        //console.log(ui.draggable);
                         ui.draggable.addClass("drag");
                         scope.callbacks.setCount($(".drag").length);
+
+                        //ui.draggable.detach().appendTo($(this));
                     }
                 });
             });

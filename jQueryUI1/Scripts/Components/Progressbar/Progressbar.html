@@ -1,13 +1,5 @@
-﻿<div id="progressbar-{{scope.id}}"></div>
-
-<button type="button" 
-        class="btn btn-default"
-        ng-click="scope.changeValue(1)">
-    <span class="glyphicon glyphicon-plus"></span>
-</button>
-
-<button type="button"
-        class="btn btn-default"
-        ng-click="scope.changeValue(-1)">
-    <span class="glyphicon glyphicon-minus"></span>
-</button>
+﻿<div id="progressbar-{{scope.id}}" style="vertical-align: middle">
+    <div class="col-md-2 col-md-offset-5" style="text-align: center; font-size: 14pt;">
+        {{percentage}}%
+    </div>
+</div>

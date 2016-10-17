@@ -1,25 +1,36 @@
 ﻿angular.module("mainModule")
     .component("progressbar", {
-        controller: function () {
+        controller: function ($scope) {
             var scope = this;
             var progressbar = {};
+            $scope.value = this.value;
+            $scope.max = this.max;
+            $scope.percentage = 0;
 
             setTimeout(function () {
                 progressbar = $("#progressbar-" + scope.id);
                 progressbar.progressbar({
-                    value: scope.value
+                    value: scope.value,
+                    max: scope.max
+                });
+
+                $scope.$watch("scope.value", function (newValue) {
+                    progressbar.progressbar("option", "value", newValue);
+                    $scope.percentage = Math.floor((scope.value / scope.max) * 100);
+                });
+
+                $scope.$watch("scope.max", function (newValue) {
+                    progressbar.progressbar("option", "max", newValue);
+                    $scope.percentage = Math.floor((scope.value / scope.max) * 100);
                 });
             }, 100);
 
-            scope.changeValue = function (number) {
-                scope.value += number;
-                progressbar.progressbar("option", "value", scope.value);
-            }
         },
         controllerAs: "scope",
         templateUrl: "Scripts/Components/Progressbar/Progressbar.html",
         bindings: {
             id: "=",
-            value: "="
+            value: "<",
+            max: "<"
         }
     });

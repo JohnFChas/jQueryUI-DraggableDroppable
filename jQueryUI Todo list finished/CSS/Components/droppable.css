@@ -1,0 +1,17 @@
+﻿.board {
+    width: 200px;
+    height: 400px;
+    padding: 0.5em;
+    float: left;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.trashcan {
+    width: 120px;
+    height: 120px;
+    padding: 0.5em;
+    float: left;
+    margin: 10px;
+    border: 1px solid blue;
+}

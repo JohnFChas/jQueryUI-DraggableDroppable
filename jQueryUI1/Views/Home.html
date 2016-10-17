@@ -3,17 +3,25 @@
 </div>
 
 <div class="col-md-12">
-    <h3 ng-bind="count"></h3>
+    <progressbar id="1" value="count" max="notes.length"></progressbar>
 </div>
 
 <div class="col-md-12">
-    <progressbar id="1" value="50"></progressbar>
+    <button type="button" class="btn btn-default" ng-click="addNote()">
+        <span class="glyphicon glyphicon-plus"></span> New note
+    </button>
+
+    <button type="button" class="btn btn-default" ng-click="test()">Test</button>
+</div>
+
+<div class="col-md-12">
+    <trashcan callbacks="callbacks"></trashcan>
 </div>
 
 <div class="col-md-6">
-    <draggable id="1" body="'My note 1'"></draggable>
-    <draggable id="2" body="'My note 2'"></draggable>
-    <draggable id="3" body="'My note 3'"></draggable>
+    <div ng-repeat="note in notes track by note.id">
+        <draggable id="note.id" body="note.body"></draggable>
+    </div>
 </div>
 <div class="col-md-6">
     <droppable id="1" callbacks="callbacks"></droppable>
